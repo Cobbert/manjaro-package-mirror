@@ -11,7 +11,7 @@ LOCKFILE=/tmp/rsync-manjaro.lock
 echo "$(date) >> Start synchronization with ${SOURCE_MIRROR}"
 
 synchronize() {
-    $RSYNC -rtlvH --delete-after --delay-updates --safe-links "${SOURCE_MIRROR}" "$DESTPATH"
+    rsync -rtlvH --delete-after --delay-updates --safe-links "${SOURCE_MIRROR}" "$DESTPATH"
 }
 
 
